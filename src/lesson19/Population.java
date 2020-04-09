@@ -23,7 +23,27 @@ public class Population{
 
   public void createPeople(){
     for(int i=0; i<this.people.length; i++){
-      this.addPerson(new StayAtHome()); //need to change later
+    	int randInt=random.nextInt(6);//0,1,2,3,4,5
+    	if(randInt==0){
+    		this.addPerson(new StayAtHome());
+    	}
+    	else if(randInt==1){
+    		this.addPerson(new StayAtHomeIfSick());
+    	}
+    	else if(randInt==2){
+    		this.addPerson(new Skeptic());
+    	}
+    	else if(randInt==3){
+    		this.addPerson(new FrequentFlier());
+    	}
+    	else if(randInt==4){
+    		this.addPerson(new LowImmunityPerson());
+    	}
+    	else if(randInt==5){
+    		this.addPerson(new HighImmunityPerson());
+    	}
+    	
+      
     }
   }
 
