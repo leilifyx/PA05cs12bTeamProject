@@ -1,5 +1,6 @@
 package lesson19;
 
+
 public class Country {
 
 	/** these are summary statistics about the epidemic
@@ -85,6 +86,18 @@ public class Country {
 		      +"/"+this.numPeople
 					+" recovered:"+this.numRecovered);
 
+	}
+	
+	public int getNumInfected(){
+		return numInfected;
+	}
+	
+	public int getNumRecovered(){
+		return numRecovered;
+	}
+	
+	public int getNumPeople(){
+		return numPeople;
 	}
 
 	public void printCountry() {
