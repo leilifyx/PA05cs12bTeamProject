@@ -17,8 +17,10 @@ public class AnalyzeSimulation {
 			int numEssential = Integer.parseInt(args[3]);
 			int numSkeptic = Integer.parseInt(args[4]);
 			int numFrequentFlier = Integer.parseInt(args[5]);
-			int numLowImmunityPerson= Integer.parseInt(args[6]);
-			int numReps=Integer.parseInt(args[7]); //how many times to run simulation
+			int numLowImmunityPerson = Integer.parseInt(args[6]);
+			int numHighImmunityPerson = Integer.parseInt(args[7]);
+			int numImmunityLoser = Integer.parseInt(args[8]);
+			int numReps=Integer.parseInt(args[9]); //how many times to run simulation
 
 			int repNum=0;
 			
@@ -29,7 +31,8 @@ public class AnalyzeSimulation {
 			for(int run=0; run<numReps; run++){
 			//create population of mixed types of people
 			Population population;
-			population = new MixedPopulation(numStayHome, numEssential, numSkeptic + numFrequentFlier+numLowImmunityPerson);
+			int numOthers=numSkeptic+numFrequentFlier+numLowImmunityPerson+numHighImmunityPerson+numImmunityLoser;
+			population = new MixedPopulation(numStayHome, numEssential, numOthers);
 			population.createPeople();
 			
 			//create country of width width and height height

@@ -25,7 +25,7 @@ public class MixedPopulation extends Population{
     }
     
     for(int i=0; i<this.numOthers; i++){
-      int randInt=random.nextInt(4);//0,1,2,3
+      int randInt=random.nextInt(4);//0,1,2,3,4
     	if (randInt==0){
     		this.addPerson(new Skeptic());
     	}
@@ -37,6 +37,9 @@ public class MixedPopulation extends Population{
     	}
     	else if(randInt==3){
     		this.addPerson(new HighImmunityPerson());
+    	}
+    	else if(randInt==4){
+    		this.addPerson(new ImmunityLoser());
     	}
     }
     
