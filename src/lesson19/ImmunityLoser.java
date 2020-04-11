@@ -4,12 +4,20 @@ public class ImmunityLoser extends Person{
 
   public ImmunityLoser(){
     if (this.recovered && (this.age - this.infectionTime - this.recoveryTime > 5)){
-      this.recovered = false;
+    	//all variables that affect infection reset
+    	this.recovered = false;
+       this.infected=false;
+       this.infectionTime=-1;
+       this.exposed=false;
     }}
 
   public ImmunityLoser (int x, int y, Country Country){
     if (this.recovered && (this.age - this.infectionTime - this.recoveryTime > 5)){
+    	//all variables that affect infection reset
       this.recovered = false;
+      this.infected=false;
+      this.infectionTime= -1;
+      this.exposed=false;
     }}
 
     //This person assumes that they are immune to the virus given the fact that they have recovered, but for some reason have lost their immunity to the virus and may become reinfected.

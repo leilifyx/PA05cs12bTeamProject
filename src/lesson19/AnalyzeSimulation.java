@@ -1,5 +1,4 @@
 package lesson19;
-import java.util.Random;
 
 public class AnalyzeSimulation {
 	
@@ -76,7 +75,7 @@ public class AnalyzeSimulation {
 
 		}
 			
-			System.out.println("\n\n\nAverage number of days it takes until there are no new infectsions = " +avgNumDays/numReps);
+			System.out.println("\n\n\nAverage number of days it takes until there are no new infections = " +avgNumDays/numReps);
 			System.out.println("Average number of people infected = "+ avgNumInfected/numReps);
 			System.out.println("Average maximum of people infected at one time = " + avgPeakInfected/numReps);
 		}

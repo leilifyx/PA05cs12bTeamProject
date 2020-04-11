@@ -3,7 +3,11 @@ package lesson19;
 import java.util.Random;
 /**
  *  
- * @author tim
+ * @authorBrianLiao
+ * @authorKatherineLiu
+ * @authorLeiliYoungXu
+ * PA05
+ * 13 April 2020
  *
  */
 
